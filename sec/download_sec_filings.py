@@ -69,7 +69,7 @@ def main(
 
     for symbol, file_type in product(ciks, file_types):
         try:
-            filing_dir = Path(storage_dir) / "sec-edgar-filings" / file_type / symbol
+            filing_dir = Path(storage_dir) / "sec-edgar-filings" / symbol / file_type
             if filing_dir.exists():
                 print(f"- Filing for {symbol} {file_type} already exists, skipping")
             else:
